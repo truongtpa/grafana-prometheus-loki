@@ -1,6 +1,5 @@
 scrape_configs:
-  - job_name: 'node'
+  - job_name: 'cluster-node'
     static_configs:
-      - targets: ['localhost:9100'] # On AWS EC2, use the private IP address of the instance.
-      - labels:
-          name: value-for-the-name
+      - targets:
+          - '192.168.1.101:9100'
